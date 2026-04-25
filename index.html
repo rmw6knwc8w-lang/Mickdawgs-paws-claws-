@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mick Dawgs Paws & Claws – Mobile Grooming</title>
+
+  <style>
+    :root {
+      --red: #c1121f;
+      --red-dark: #8e0e17;
+      --green: #0f7a3d;
+      --green-dark: #0b5a2d;
+      --cream: #fff7f2;
+      --ink: #1a1a1a;
+      --shadow: 0 18px 40px rgba(0, 0, 0, .12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20px 20px, rgba(193, 18, 31, .08) 3px, transparent 4px),
+        radial-gradient(circle at 60px 60px, rgba(15, 122, 61, .08) 3px, transparent 4px),
+        radial-gradient(circle at 100px 20px, rgba(193, 18, 31, .05) 3px, transparent 4px),
+        #fff;
+      background-size: 140px 140px;
+      line-height: 1.65;
+    }
+
+    /* HEADER */
+    header {
+      background:
+        linear-gradient(135deg, var(--red), var(--red-dark));
+      color: #fff;
+      padding: 64px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "🐾 🐾 🐾 🐾 🐾";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 42px;
+      opacity: .15;
+      white-space: nowrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      letter-spacing: .5px;
+    }
+
+    header p {
+      margin-top: 14px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    /* NAV */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 16px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 16px;
+      font-weight: 800;
+      color: var(--red);
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "🐾";
+      position: absolute;
+      top: -14px;
+      right: -18px;
+      font-size: 12px;
+      opacity: .3;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 64px 20px;
+    }
+
+    h2 {
+      color: var(--red);
+      font-size: 34px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "🐾";
+      margin-left: 10px;
+      opacity: .3;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background:
+        linear-gradient(180deg, #fff, var(--cream));
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "🐾";
+      position: absolute;
+      bottom: 16px;
+      right: 18px;
+      font-size: 56px;
+      opacity: .08;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    /* PILLS */
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background:
+        linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 6px 16px rgba(15, 122, 61, .25);
+    }
+
+    /* AREA */
+    .areaBox {
+      background:
+        linear-gradient(135deg, var(--cream), #ffe3d8);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .areaBox::after {
+      content: "🐾 🐾 🐾";
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      opacity: .15;
+    }
+
+    /* BOOKING */
+    .bookingBox {
+      background:
+        linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 48px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .bookingBox::after {
+      content: "🐾";
+      position: absolute;
+      bottom: 20px;
+      right: 26px;
+      font-size: 64px;
+      opacity: .2;
+    }
+
+    .bookingBox h2 {
+      color: #fff
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 16px 34px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--green-dark);
+      font-weight: 900;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .25);
+    }
+
+    /* CONTACT */
+    .contactBtn {
+      background:
+        linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff;
+      border: none;
+      padding: 16px 34px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .contactReveal {
+      display: none;
+      margin-top: 24px;
+      background: #fff;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 28px;
+      font-size: 13px;
+      border-top: 1px solid #eee;
+      background: #fff;
+    }
+
+    @media(max-width:600px) {
+      header h1 {
+        font-size: 30px
+      }
+
+      h2 {
+        font-size: 26px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Mick Dawgs Paws & Claws</h1>
+    <p>Where your furbaby is in great hands, we come to you stress free to save you time!</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#area">Service Area</a>
+    <a href="#booking">Book</a>
+    <a href="#contact">Contact Here</a>
+  </nav>
+
+  <section id="services">
+    <h2>Grooming Services</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Bath & Tidy</h3>
+        <p>Bath, blow dry, brush-out, nails, ears, and light trimming.</p>
+      </div>
+
+      <div class="card">
+        <h3>Full Groom (Haircut)</h3>
+        <p>Complete groom with full haircut and finishing.</p>
+      </div>
+
+      <div class="card">
+        <h3>De-shed / Brush-Out</h3>
+        <p>Helps reduce shedding and prevent matting.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:42px;">Additional Services & Add-Ons</h3>
+
+    <div class="pills">
+      <span class="pill">Nail Trim & File</span>
+      <span class="pill">Anal Gland Expression</span>
+      <span class="pill">Ear Cleaning</span>
+      <span class="pill">Teeth Brushing</span>
+      <span class="pill">Sanitary Trim</span>
+      <span class="pill">Face Trim</span>
+      <span class="pill">Paw Pad Trim</span>
+      <span class="pill">Matting Removal*</span>
+    </div>
+
+    <p style="font-size:13px;margin-top:14px;">
+      *Additional fees may apply for severe matting.
+    </p>
+  </section>
+
+  <section id="area">
+    <h2>Service Area & Hours</h2>
+
+    <div class="areaBox">
+      <p><strong>We proudly serve:</strong></p>
+      <p>
+        Suisun • Fairfield • Vallejo • Vacaville • Cordelia • Hercules • Pinole • Richmond • Berkeley, CA
+      </p>
+
+      <p style="margin-top:16px;">
+        <strong>Hours:</strong> 9:00 AM – 5:00 PM
+      </p>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="bookingBox">
+      <h2>Request Booking</h2>
+      <p>Submit a booking request and we’ll confirm by call or text.</p>
+
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeRCY06X2LunJD31Rf3F1wK9jtnvB2KpreUq9LaVF-bXzApEw/viewform?usp=dialog" target="_blank">
+        Request Booking
+      </a>
+
+      <p style="margin-top:24px;">
+        <strong>Payment Methods:</strong><br>
+        Cash • Apple Pay • Venmo • Check
+      </p>
+
+      <p style="margin-top:12px;">
+        <strong>Cancellation Policy:</strong><br>
+        $25 cancellation fee for late cancellations or no-shows.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <button class="contactBtn" onclick="showContact()">Contact Here</button>
+
+    <div class="contactReveal" id="contactBox">
+      <p><strong>Call or Text:</strong></p>
+      <a href="tel:15104725502">510-472-5502</a><br>
+      <a href="sms:15104725502">Text Message</a><br><br>
+      <a <a href="https://www.instagram.com/mickdawgs_mobilegrooming/" target="_blank">
+        Instagram: @mickdawgs_mobilegrooming
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Mick Dawgs Paws & Claws – Mobile Grooming Service
+  </footer>
+
+  <script>
+    function showContact() {
+      document.getElementById("contactBox").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
